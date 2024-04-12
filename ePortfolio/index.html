@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePortfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital@1&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap'>
+    <script src="https://kit.fontawesome.com/d66fe15ff7.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header id="main-header">
+        <h1>ePortfolio</h1>
+        <a><i class="fa-regular fa-futbol fa-bounce"></i></a>
+    </header>
+    <nav id="nav-bar">
+        <div id="nav-left">
+
+            <!-- For Responsiveness, add a burger menu icon - this will be hidden on
+                larger screens and will be shown on narrow screens -->
+                <a id="burger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+
+            <div id="forward-back-buttons">
+                <a>
+                    <i class="fa-solid fa-circle-chevron-left" onclick="window.history.back()"></i>
+                </a>
+                
+                <a>
+                    <i class="fa-solid fa-circle-chevron-right" onclick="window.history.forward()"></i>
+                </a>
+                
+                
+            </div>
+        
+            <ul id="nav-links">
+                <li><a href="#animation-section">Animation</a></li>
+                <li><a href="#gallery-section">Gallery</a></li>
+                <li><a href="#video-section">Video</a></li>
+                <li><a href="#audio-section">Audio</a></li>
+                <li><a href="#form-section">Form</a></li>
+                <li><a href="#map-section">Map</a></li>
+                <li><a href="#character-section">Characters</a></li>
+            </ul>
+        </div>
+        <div id="nav-right">
+ 
+            <a id="settings-icon">
+                <i class="fa-solid fa-gear fa-bounce"></i>
+                <span class="tool-tip">Change settings here!</span>
+            </a>
+            <div id="settings-panel">
+                <table id="settings-table">
+                    <tr>
+                        <td>Background Colour</td>
+                        <td>
+                            <input type="color" id="settings-bg-color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Font Colour</td>
+                        <td>
+                            <input type="color" id="settings-font-color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Font Size <span id="font-size" style="font-weight: bold;">18</span>px</td>
+                        <td>
+                            <input type="range" id="settings-font-size" min="10" max="60" value="18">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="settings-btn-row">
+                            <button id="settings-save">Save</button>
+                            <button id="settings-reset">Default</button>
+                            <button id="settings-clear">Cancel</button>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-container">
+        <section id="welcome-section" class="main-section">
+            <h1 id="welcome">Welcome <span id="user-name"></span></h1>
+
+            <div id="welcome-btn-container">
+                <button id="user-reset">Reset</button>
+                <button onclick="localStorage.clear(); userNameSpan.innerText = localStorage.getItem('Username');">Clear All</button>
+            </div>
+            
+            <svg id = "svgscarf" width="800" height=100>
+                <rect x="0" y="0" width="100" height="50" fill="green"></rect>
+                <rect x="100" y="0" width="100" height="50" fill="white"></rect>
+                <rect x="200" y="0" width="100" height="50" fill="green"></rect>
+                <rect x="300" y="0" width="100" height="50" fill="white"></rect>
+                <rect x="400" y="0" width="100" height="50" fill="green"></rect>
+                <rect x="500" y="0" width="100" height="50" fill="white"></rect>
+                <rect x="600" y="0" width="100" height="50" fill="green"></rect>
+                <rect x="700" y="0" width="100" height="50" fill="white"></rect>
+                <rect x="800" y="0" width="100" height="50" fill="green"></rect>
+            </svg>
+            
+        </section>
+
+        <section id="animation-section" class="main-section">
+            <h1>Animation</h1>
+           <div class="a-container">
+            <div class="a-circle"></div>
+            <div class="a-box"></div>
+           </div>
+
+           <div class="animation-controls">
+            <button id="a-start" class="control-btn">Start</button>
+            <button id="a-stop" class="control-btn">Stop</button>
+            <input type="range" id="a-speed" min="1" max="20" value="3">
+            <span id="a-speed-display">3 </span> seconds
+           </div>
+        </section>  
+
+        <section id="gallery-section" class="main-section">
+            <h1>Image Gallery</h1>
+            <div id="g-container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                      <img src="images/celticpark.jpg" style="width:100%">
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                      <img src="images/celticfans.jpg" style="width:100%">
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                      <img src="images/celtic_team.jpg" style="width:100%">
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                      <img src="images/greenbrigade.jpg" style="width:100%">
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                      <img src="images/jota.jpg" style="width:100%">
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                      <img src="images/champions.jpg" style="width:100%">
+                  </div>
+                
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                  <!-- Image text -->
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+                
+                  <!-- Thumbnail images -->
+                  <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="images/celticpark.jpg" style="width:95%" onclick="currentSlide(1)" alt="Celtic Park">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/celticfans.jpg" style="width:95%" onclick="currentSlide(2)" alt="Celtic Fans">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/celtic_team.jpg" style="width:105%" onclick="currentSlide(3)" alt="Celtic Team">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/greenbrigade.jpg" style="width:105%" onclick="currentSlide(4)" alt="Green Brigade">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/jota.jpg" style="width:95%" onclick="currentSlide(5)" alt="Jota">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/champions.jpg" style="width:85%" onclick="currentSlide(6)" alt="Champions">
+                    </div>
+                  </div>
+            </div>
+            
+            
+        </section>
+
+        <section id="video-section" class="main-section">
+            <h1>Video</h1>
+            
+            <div id="yt-container">
+                <h2>Limmy's Show</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIFxmnibf24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div id="hvid-container">
+                <h2>A nice lake in Scotland</h2>
+                <video controls width="560">
+                    <source src="video/lake-154979.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section id="audio-section" class="main-section">
+            <h1>Audio</h1>
+            <div id="audio-container">
+                <audio controls>
+                    <source src="audio/futuristic-beat-146661.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </section>
+
+        <section id="form-section" class="main-section">
+            <h1>Contact Form</h1>
+            <form action="#" id="contact-form" method="post">
+                <input type="text" name="i-name" class="input" placeholder="Name"><br>
+                <input type="number" name="i-age" class="input" placeholder="Age"><br>
+                <input type="email" name="i-email" class="input" placeholder="Email"><br>
+
+                <label for="i-dob">Date of Birth:</label>
+                <input type="date" class="input" name="i-dob"><br>
+
+                <label>Gender:</label>
+                <br>
+                
+                
+                <input type="radio" name="i-gender" id="radio-male" class="radio" value="male"> 
+                <label for="i-gender">Male</label>
+                <br>
+                
+                <input type="radio" name="i-gender" id="radio-female" class="radio" value="female"> 
+                <label for="i-gender">Female</label>
+                <br><br>
+
+                <label>Have Rangers won the European Cup?</label>
+                <br>
+                
+                <input type="radio" name="i-team" id="radio-no" class="radio" value="no"> 
+                <label for="i-team">No</label>
+                <br>
+                <input type="radio" name="i-team2" id="radio-no2" class="radio" value="no2"> 
+                <label for="i-team2">No, but Celtic have</label>
+                <br><br>
+
+                <label for="i-options">Select an option</label>
+                <select name="i-options">
+                    <option value="TX">Twix</option>
+                    <option value="DM">Dairy Milk</option>
+                    <option value="BB">Boost Bar</option>
+                    <option value="MS">Mars</option>
+                </select> <br>
+
+                <textarea name="i-msg" cols="30" rows="10" placeholder="Please list anything else here..."></textarea><br>
+
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+            
+            
+        </section>
+
+        <section id="map-section" class="main-section">
+            <h1>Map</h1>
+
+            <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19019.792865136802!2d-7.90929119160156!3d53.42423072700047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1682679703937!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+            <h3>Your current location</h3>
+            <div class="geoloc">
+                <button id="find-me">Show my location</button>
+                <br>
+                Your location is at
+                <p id="status"></p>
+                <p id="co-ords"></p>
+            </div>
+
+        
+        </section>
+
+        <section id="character-section" class="main-section">
+            <h1>Entities and Special Characters</h1>
+            <!-- <h2>Fonts, colours, special Characters, and the &lt;pre&gt; tag</h2> -->
+
+            <h3 class="special-chars-title">Go <sup>high</sup> or go <sub>low</sub></h3>
+            <p class="special-chars">
+                The <sup>Superscript</sup> element and <sub>Subscript</sub> element are often used in mathematical
+                and scientific notation. They effectively make a character hover slightly or drop lower. <br>
+                H<sub>2</sub>O is an example of <sub>Subscript</sub> and is a useful tool for writing symbols in chemistry and also keeping you hydrated. <br>
+                X <sup>2</sup> + Y <sup>2</sup> is an example of <sup>superscript</sup> and can be used for writing algebra equations in mathematics.
+            </p>
+
+            <h3 class="special-chars-title">&#123;Bits &#38; Bobs&#125;</h3>
+            <p class="special-chars">
+                There are many different special characters and symbol entities in html. You may want to print these to the screen without affecting the code in HTML <br>
+                <!-- &copy; can also be created using the <strong>&amp;copy;</strong> entity code. <br> -->
+                To write a less than sign, we can write <strong>&amp;#60</strong> that produces the symbol like this &#60 <br>
+                This can be useful in trying to display code on a website, with various parenthesis &#40;&#41;<strong>&amp;#40</strong> and <strong>&amp;#41</strong> <br>
+                <strong>&amp;#191;</strong> is an upside down question mark &#191; &#191; &#191; &#191; &#191;<br>
+                They can also be written like this using the entity code <strong>&amp;euro;</strong> This lets us display the euro currency symbol &euro;
+            </p>
+
+            <h3 class="special-chars-title">Big, bold and colourful</h3>
+            <p class="special-chars">
+                <span class="font">
+                    <b>This sentence is typed in BOLD and uses Google font, 'Bebas Neue'.</b>
+                </span>
+                <span class="colour">
+                    <i>This sentence is typed in italics and coloured crimson.</i>
+                </span>
+            </p>
+
+            <!-- <h3 class="special-chars-title">The &lt;pre&gt; tag</h3>
+            <p class="special-chars">
+                The text in a &lt;pre&gt; element is displayed in a fixed-width font, and the text preserves
+                both spaces and line-breaks. The text will be displayed exactly as it is typed in the html document.
+            </p>
+
+            <pre>
+              You         are    seeing    me     within a &lt;pre&gt; element. 
+            </pre> -->
+
+            <h3 class="special-chars-title">Spinny Thing</h3>
+                <p class="special-chars">
+                Below is an example of <b>Opacity</b> and a paragraph container endlessly spinning.
+                </p>
+
+            <div id="background">
+                <p id="spinner">this will keep spinning and spinning and spinning...</p>
+            </div>
+
+            <h3 class="special-chars-title">Link States</h3>
+                <p class="special-chars">
+                <a href="#">Clicking on this link will bring you to the top of the page!</a>
+
+                <br>
+                <br>
+
+                ACTIVE LINK change to purple. <br>
+                VISITED LINK change to green. <br>
+                HOVER on this link and it will change to orange. <br>
+
+                </p>
+
+                <div class="container">
+                    <div class="object1"></div>
+                    <div class="object2"></div>
+                  </div>
+                  
+        </section>
+        
+        
+        
+    </main>
+    <footer>
+        Copyright &copy; Seán Hester ePortfolio 2023
+    </footer>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
